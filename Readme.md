@@ -19,7 +19,9 @@ __`tip-target` class would be added to target element__
 
 ## API
 
-### tip()
+### tip([limit])
 
-Initialize tip with all element has `data-tip` attribute.
-Tip element would be shown at bottom on default.
+Initialize tip with all element has `data-tip` attribute.  Tip element would be
+shown at bottom on default.  Use `limit` (could contain `left`, `right` and
+`bottom` as number) to set the minimal margin to make tip shown at bottom.
+
