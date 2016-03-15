@@ -3,26 +3,68 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>{name}</title>
+    <title>auto tip</title>
     <link rel="stylesheet" href="./common.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../tip.css">
     <style type="text/css" media="screen">
       body {
-        padding: 80px;
-      }
-      #demo {
-        width: 200px;
-        height: 200px;
-        background-color: #5CB85C;
-        position: absolute;
-        top: 100px;
-        left: 100px;
+        padding: 0px;
       }
       #code > pre {
         background:#fdf6e3
       }
+      #viewport {
+        height: 100vh;
+        position: relative;
+      }
+      #viewport > div.left,
+      #viewport > div.right,
+      #viewport > div.top,
+      #viewport > div.bottom {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+      }
+      .left {
+        background-color: tomato;
+        margin-top: -15px;
+        left: 0;
+        top: 50%;
+      }
+      .right {
+        background-color: deepskyblue;
+        margin-top: -15px;
+        right: 0;
+        top: 50%;
+      }
+      .top {
+        background-color: orange;
+        margin-left: -50px;
+        left: 50%;
+        top 0;
+      }
+      .bottom {
+        background-color: lightgreen;
+        margin-left: -50px;
+        bottom: 0;
+        left: 50%;
+        top: auto;
+      }
+      .hover,.click {
+        display: inline-block;
+        margin: 3em;
+      }
     </style>
   </head>
   <body>
+    <div id="viewport">
+      <div class="click" data-tip-position="bc-tc" data-tip="click show">click me</div>
+      <div class="hover" data-tip="hover show">hover me</div>
+      <div class="left abs" data-tip="from left"></div>
+      <div class="right abs" data-tip="from right"></div>
+      <div class="top abs" data-tip="from top"></div>
+      <div class="bottom abs" data-tip="from bottom"></div>
+    </div>
     <script src="./bundle.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

@@ -14,7 +14,7 @@ var myConfig = Object.assign({}, config, {
 
 var paths = {
   // file list for webpack build
-  scripts: ['lib/index.js', 'example/index.js'],
+  scripts: ['index.js', 'example/index.js'],
   // file list for reload
   asserts: ['example/bundle.js', 'example/*.css', 'example/index.html']
 }

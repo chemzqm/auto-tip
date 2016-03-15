@@ -1,27 +1,55 @@
 # Auto-tip
 
-Auto-tip detect the element positon and show/hide the tip on mouseover/mouseout,
-eg: if target is on the left side of page, tip would be shown on the right hand.
+A simple and smart tip component using [align](https://github.com/chemzqm/align)
 
 ## Example
 
 ``` html
-<span data-tip="add new item">+</span>
+<span data-tip="add new item" data-tip-position="tc-bc">+</span>
 ```
 
 ``` js
-var tip = require('auto-tip')
-//initialize tip with all element has `data-tip` attribute
-tip()
+var Tip = require('auto-tip')
+var tip = Tip(el)
+tip.show()
+tip.hide() // tip.fade() to fade out
 ```
-
-__`tip-target` class would be added to target element__
 
 ## API
 
-### tip([limit])
+### tip(el, [option])
 
-Initialize tip with all element has `data-tip` attribute.  Tip element would be
-shown at bottom on default.  Use `limit` (could contain `left`, `right` and
-`bottom` as number) to set the minimal margin to make tip shown at bottom.
+Initialize tip element and optional option.
 
+* `option.align` align option for [align](https://github.com/chemzqm/align)
+* `option.limit` the minimal margin betwwen el and viewport in pixeles
+
+### .show([text])
+
+Show with optional text.
+
+### .hide()
+
+Remove the tip.
+
+### .fade()
+
+Remove the tip with fade css classes, change classes `.tip-hide` to customized
+it, default is:
+
+``` css
+.tip-hide {
+  opacity: 0;
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+```
+
+## .visible
+
+Check if tip element visible.
+
+## License
+
+MIT

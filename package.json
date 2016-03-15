@@ -6,8 +6,7 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/chemzqm/auto-tip.git"
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/chemzqm/auto-tip#readme",
   "devDependencies": {
+    "component-closest": "^1.0.0",
     "coveralls": "^2.11.4",
     "css-loader": "^0.23.0",
     "expect": "^1.13.0",
@@ -50,6 +50,18 @@
     "webpack": "^1.12.6",
     "webpack-dev-server": "^1.12.1"
   },
-  "dependencies": {},
-  "browser": {}
+  "dependencies": {
+    "component-align": "0.0.1",
+    "component-classes": "^1.2.5",
+    "component-event": "^0.1.4",
+    "domify": "^1.4.0",
+    "transitionend-property": "0.0.2"
+  },
+  "style": "tip.css",
+  "browser": {
+    "align": "component-align",
+    "classes": "component-classes",
+    "event": "component-event",
+    "closest": "component-closest"
+  }
 }
