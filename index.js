@@ -1,3 +1,4 @@
+require('../tip.css')
 var Tip = require('..')
 var closest = require('closest')
 var els = [].slice.call(document.querySelectorAll('#viewport > div.abs'))
