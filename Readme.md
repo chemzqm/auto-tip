@@ -27,12 +27,11 @@ tip.hide() // tip.fade() to fade out
 
 Initialize tip element and optional option.
 
-* `option.align` align option for [align](https://github.com/chemzqm/align)
 * `option.limit` the minimal margin betwwen el and viewport in pixeles
 
-### .show([text])
+### .show([text], [offset])
 
-Show with optional text.
+Show with optional text and offset for [align](https://github.com/chemzqm/align).
 
 ### .hide()
 
@@ -52,7 +51,7 @@ it, default is:
 }
 ```
 
-## .visible
+### .visible
 
 Check if tip element visible.
 

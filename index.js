@@ -11,7 +11,7 @@ function Tip(el, options) {
   this.tip = domify('<div class="tip"><div class="tip-arrow"></div><div class="tip-inner"></div></div>')
 }
 
-Tip.prototype.show = function (text) {
+Tip.prototype.show = function (text, offset) {
   text = text || this.el.getAttribute('data-tip')
   var opts = this.options
   var alstr = opts.align || this.el.getAttribute('data-tip-position')
@@ -40,7 +40,7 @@ Tip.prototype.show = function (text) {
   } else {
     classes(this.tip).add('tip-bottom')
   }
-  align(this.el, this.tip, alstr)
+  align(this.el, this.tip, alstr, offset)
   this.visible = true
 }
 
