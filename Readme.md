@@ -4,6 +4,10 @@ A simple and smart tip component using [align](https://github.com/chemzqm/align)
 
 [demo](http://chemzqm.github.io/auto-tip/)
 
+## Install
+
+    npm i auto-tip
+
 ## Example
 
 ``` html
